@@ -23,7 +23,7 @@ export default function Home() {
         <p className="mb-8 text-lg">Need to log your wallet address?</p>
 
         <Link
-          href="/home"
+          href="/connection"
           className="bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white py-2 rounded hover:bg-gray-900 text-center p-3">
           <button className="">Connect Wallet</button>
         </Link>
