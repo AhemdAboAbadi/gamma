@@ -2,9 +2,9 @@ import Link from "next/link"
 
 export default function Home() {
   return (
-    <div className="flex h-screen">
+    <div className="flex flex-col md:flex-row h-auto md:h-screen">
       {/* Left Side */}
-      <div className="bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white w-1/2 p-16 flex flex-col justify-center">
+      <div className="bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white w-full  p-16 flex flex-col justify-center">
         <h1 className="text-4xl font-bold mb-4 leading-tight">
           Make Your Dream
         </h1>
@@ -18,7 +18,7 @@ export default function Home() {
       </div>
 
       {/* Right Side */}
-      <div className="bg-white w-1/2 p-16 flex flex-col justify-center">
+      <div className="bg-white w-full md:w-1/2 p-10 md:p-16 flex flex-col justify-center items-center text-center">
         <h1 className="text-4xl font-bold mb-2">Welcome To Gamma Assets</h1>
         <p className="mb-8 text-lg">Need to log your wallet address?</p>
 
