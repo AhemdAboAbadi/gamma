@@ -15,6 +15,11 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Gamma Assets",
   description: "Created by Ahmed Abo Abadi",
+  icons: {
+    icon: "/LandingLogo.webp",
+    shortcut: "/LandingLogo.webp",
+    apple: "/LandingLogo.webp",
+  },
 }
 
 export default function RootLayout({
