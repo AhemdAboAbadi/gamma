@@ -3,6 +3,8 @@
 import {useState} from "react"
 import WalletCard from "@/components/shared/WalletCard"
 import {connectWallet, disconnectWallet} from "./wallet.service"
+import Button from "@/components/shared/Button"
+import {Wallet} from "lucide-react"
 
 export default function Connection() {
   const [walletAddress, setWalletAddress] = useState("")
@@ -28,11 +30,12 @@ export default function Connection() {
         <h1 className="text-3xl font-bold mb-6">Connect your Wallet</h1>
 
         {!walletAddress ? (
-          <button
+          <Button
             onClick={handleConnect}
-            className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-600 hover:to-purple-600 transition text-white font-semibold py-2 px-6 rounded-lg mb-4">
-            Connect Wallet
-          </button>
+            className="flex gap-10 items-center justify-center bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-600 hover:to-purple-600 transition text-white font-semibold py-2 px-6 rounded-lg mt-8 mx-auto"
+            title="Connect Wallet"
+            icon={<Wallet />}
+          />
         ) : (
           <WalletCard
             walletAddress={walletAddress}

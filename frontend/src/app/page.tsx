@@ -1,4 +1,6 @@
 import Link from "next/link"
+import Button from "@/components/shared/Button"
+import {MoveRight} from "lucide-react"
 
 export default function Home() {
   return (
@@ -21,11 +23,12 @@ export default function Home() {
         <h1 className="text-4xl font-bold mb-2">Welcome To Gamma Assets</h1>
         <p className="mb-8 text-lg">Need to log your wallet address?</p>
 
-        <Link
+        <Button
+          title="Connect Wallet"
+          className="flex gap-10 items-center justify-center rounded-lg bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white py-4 p-5 hover:bg-gray-900 text-center "
+          icon={<MoveRight />}
           href="/connection"
-          className="bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white py-2 rounded hover:bg-gray-900 text-center p-3">
-          <button className="">Connect Wallet</button>
-        </Link>
+        />
       </div>
     </div>
   )
