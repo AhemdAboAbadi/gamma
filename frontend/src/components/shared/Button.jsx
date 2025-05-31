@@ -1,7 +1,15 @@
 import React from "react"
 import Link from "next/link"
 
-const Button = ({title, className, onClick, icon, href}) => {
+const Button = ({
+  title,
+  disabled,
+  className,
+  onClick,
+  icon,
+  href,
+  ...props
+}) => {
   const content = (
     <>
       {title}
@@ -18,7 +26,11 @@ const Button = ({title, className, onClick, icon, href}) => {
   }
 
   return (
-    <button onClick={onClick} className={className}>
+    <button
+      onClick={onClick}
+      className={className}
+      disabled={disabled}
+      {...props}>
       {content}
     </button>
   )
