@@ -1,6 +1,15 @@
 import React from "react"
 import Link from "next/link"
 
+interface ButtonProps {
+  title: string
+  disabled?: boolean
+  className?: string
+  onClick?: () => void
+  icon?: React.ReactNode
+  href?: string
+}
+
 const Button = ({
   title,
   disabled,
@@ -9,7 +18,7 @@ const Button = ({
   icon,
   href,
   ...props
-}) => {
+}: ButtonProps) => {
   const content = (
     <>
       {title}
