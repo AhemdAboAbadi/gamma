@@ -1,6 +1,6 @@
 import {ethers} from "ethers"
 import {toast} from "react-toastify"
-import axiosInstance from "../../../utilities/axiosInstance"
+import axiosInstance from "../../utilities/axiosInstance"
 
 export async function connectWallet(): Promise<{
   address: string
