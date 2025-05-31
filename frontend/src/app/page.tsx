@@ -10,10 +10,9 @@ export default function Home() {
         </h1>
         <hr className="border-gray-600 mb-4" />
         <p className="text-sm leading-relaxed">
-          Lorem Ipsum is simply dummy text of the printing anLorem ipsum dolor
-          sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco
+          You can own shares in premium assets that generate regular income,
+          such as real estate, all without any effort on your part. Professional
+          management ensures sustainable returns of up to 30% annually!
         </p>
       </div>
 
