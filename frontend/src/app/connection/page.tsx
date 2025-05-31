@@ -9,12 +9,18 @@ import {Wallet} from "lucide-react"
 export default function Connection() {
   const [walletAddress, setWalletAddress] = useState("")
   const [balance, setBalance] = useState("")
+  const [isConnecting, setIsConnecting] = useState(false)
 
   const handleConnect = async () => {
-    const data = await connectWallet()
-    if (data) {
-      setWalletAddress(data.address)
-      setBalance(data.balance)
+    setIsConnecting(true)
+    try {
+      const data = await connectWallet()
+      if (data) {
+        setWalletAddress(data.address)
+        setBalance(data.balance)
+      }
+    } finally {
+      setIsConnecting(false)
     }
   }
 
@@ -32,8 +38,11 @@ export default function Connection() {
         {!walletAddress ? (
           <Button
             onClick={handleConnect}
-            className="flex gap-10 items-center justify-center bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-600 hover:to-purple-600 transition text-white font-semibold py-2 px-6 rounded-lg mt-8 mx-auto"
-            title="Connect Wallet"
+            disabled={isConnecting}
+            className={`flex gap-10 items-center justify-center bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-600 hover:to-purple-600 transition text-white font-semibold py-2 px-6 rounded-lg m-8 mx-auto ${
+              isConnecting ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+            title={isConnecting ? "Connecting..." : "Connect Wallet"}
             icon={<Wallet />}
           />
         ) : (
